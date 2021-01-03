@@ -134,11 +134,9 @@ const removeKey = (obj, key) =>{
 
 // Combine two objects and return a new object.
 
-const combine = (obj1, obj2) =>({...obj1,...obj2});
+const combine = (obj1, obj2) => ({...obj1,...obj2});
 
 
 // Return a new object with a modified key and value.
 
-const update = (obj, key, val) => {
-
-}
+const update = (obj, key, val) => ({...obj, [key] : val});
