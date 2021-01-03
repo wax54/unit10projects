@@ -101,7 +101,12 @@ function update(obj, key, val) {
 
 const removeRandom = items => {
     const copy = [...items];
-    const rand = Math.floor(Math.Random() * copy.length);
+    const rand = Math.floor(Math.random() * copy.length);
     copy.splice(rand,1);
     return copy; 
 }
+
+
+// Return a new array with every item in array1 and array2. 
+
+const extend = (array1, array2) => [...array1, ...array2];
