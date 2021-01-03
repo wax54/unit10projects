@@ -94,3 +94,14 @@ function update(obj, key, val) {
 
 }
  */
+
+
+//remove a random element in the items array
+//and return a new array without that item. 
+
+const removeRandom = items => {
+    const copy = [...items];
+    const rand = Math.floor(Math.Random() * copy.length);
+    copy.splice(rand,1);
+    return copy; 
+}
