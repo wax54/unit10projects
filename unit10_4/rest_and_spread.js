@@ -120,3 +120,27 @@ const addKeyVal = (obj, key, val) => {
     copy[key] = val;
     return copy;
 };
+
+
+
+// Return a new object with a key removed. 
+
+const removeKey = (obj, key) =>{
+    copy = {...obj};
+    delete copy[key];
+    return copy;
+}
+
+
+// Combine two objects and return a new object.
+
+function combine(obj1, obj2) {
+
+}
+
+
+// Return a new object with a modified key and value.
+
+function update(obj, key, val) {
+
+}
