@@ -20,3 +20,7 @@ console.log('Everything Else is in an array',otherInfo);
 let { brewTemp:temp = 175, type = 'tea'} = teaOrder;
 console.log('brewTemp wasn\'t defined in teaOrder, so the default was used instead, it was also renamed to temp',temp);
 console.log('type is in teaOrder, so the set default wa ignored',type);
+
+const someArr = [1,'second','three',{1:'fourth'},5,6];
+const [first,second, numberThree, randomVariableName,,skipped5ThisIsSix] = someArr;
+console.log(first,second,numberThree,randomVariableName,skipped5ThisIsSix);
