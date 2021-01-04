@@ -85,9 +85,9 @@ s.bleet() //"BAAAAaaaa"
   */
 
 
-const createAnimal = (species, call, sound) => {
+const createAnimal = (species, verb, noise) => {
     return {
         species,
-        [call](){ return sound }
+        [verb](){ return noise }
     }
 }
