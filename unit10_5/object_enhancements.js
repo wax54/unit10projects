@@ -84,7 +84,13 @@ const s = createAnimal("sheep", "bleet", "BAAAAaaaa")
 s.bleet() //"BAAAAaaaa"
   */
 
-
+/**
+ * returns an animal object.
+ * 
+ * @param { string } species the species of the animal (dog, cat)
+ * @param { string } verb a string used to name the noise function (bark, bleet)
+ * @param { string } noise the string to represent the noise the animal makes
+ */
 const createAnimal = (species, verb, noise) => {
     return {
         species,
