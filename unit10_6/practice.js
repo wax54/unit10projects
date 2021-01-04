@@ -22,5 +22,17 @@ console.log('brewTemp wasn\'t defined in teaOrder, so the default was used inste
 console.log('type is in teaOrder, so the set default wa ignored',type);
 
 const someArr = [1,'second','three',{1:'fourth'},5,6];
-const [first,second, numberThree, randomVariableName,,skipped5ThisIsSix] = someArr;
-console.log(first,second,numberThree,randomVariableName,skipped5ThisIsSix);
+
+// the names don't matter, they are in the order they appear
+//    adding an extra comma skips an element
+
+const [first, second, numberThree, randomVariableName,, skipped5ThisIsSix] = someArr;
+
+console.log(first, second, numberThree, randomVariableName, skipped5ThisIsSix);
+
+
+//using the rest operatorwe can collect the rest into an array
+
+const [firstPlace, ...last] = someArr;
+console.log('the first element in the array', first);
+console.log('All the rest', last);
