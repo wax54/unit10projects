@@ -51,9 +51,18 @@ vowelCount('Colt') // Map { 'o' => 1 }
  */
 
 const vowelCount = str => {
-  vowels = new Set('aeiou');
-  const vowelsOnly = str.filter(l => vowels.has(l));
+  const vowels = new Set('aeiou');
+  const vowelsOnly = Array.from(str).filter(l => vowels.has(l));
+  const vowelCount = vowelsOnly.reduce((acc, vowel) => {
+    if (acc.has(vowel)) {
+      acc.set(vowel, (acc.get(vowel) + 1));
+    } else {
+      acc.set(vowel, 0);
+    }
+    return acc;
+  }, new Map());
 
-});
+  return vowelCount;
+};
 
- };
+
