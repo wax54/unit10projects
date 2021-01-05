@@ -34,5 +34,54 @@ console.log(first, second, numberThree, randomVariableName, skipped5ThisIsSix);
 //using the rest operatorwe can collect the rest into an array
 
 const [firstPlace, ...last] = someArr;
-console.log('the first element in the array', first);
-console.log('All the rest', last);
+console.log('the first element in the array:', first);
+console.log('All the rest:', last);
+
+
+
+const person = { 
+    name: 'tim',
+    age: 68,
+    likes: 'hamburgers'
+}
+
+function getPerson({name,age:curAge}){
+    console.log('name and age being plucked right from a function input:', name,curAge);
+    console.log('age doesn\'t not Defined, it was reasigned in the function paramater');
+}
+
+getPerson(person);
+
+
+const dog1 = {
+    name: 'Clifford',
+    age: 3,
+    likes: ['pizza','trains','planes','snacks'],
+    cuddliness: {
+        softness: 'extreme',
+        nuzzles: 'often',
+        otherNotes: 'sometimes pulls on leash'
+    },
+    fears: ['drones']
+
+};
+
+const getSoftness = function({cuddliness: {softness}}){
+    return softness;
+}
+const getALike = ({likes:[first]}) => first;
+const getARandomLike = ({likes}) => likes[Math.floor(Math.random()*likes.length)];
+
+console.log('get The softness from dog1:',getSoftness(dog1));
+console.log('dog1\'s first like:',getALike(dog1));
+console.log('dog1\'s random like:', getARandomLike(dog1));
+
+
+
+let delicious = 'Mayo';
+let disgusting = 'Whipped Cream';
+
+[delicious, disgusting] = [disgusting, delicious];
+
+console.log(disgusting, 'is Disgusting.');
+console.log(delicious, 'is Delicious.');
