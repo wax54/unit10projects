@@ -138,3 +138,8 @@ console.log('mySet - ', mySet); //set(5){1, 2, 3, "tuesday", 5}
 mySet.has('tuesday'); //true
 mySet.has(2); //true
 mySet.has('2'); //false
+
+mySet.delete(2); //true
+mySet.delete(2); //false (already deleted)
+
+console.log('mySet - ', mySet); //set(5){1, 3, "tuesday", 5} 
