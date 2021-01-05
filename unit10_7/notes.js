@@ -123,7 +123,8 @@ for (let val of myMap.values()) {
  * All Values are unique, no Duplicates
  * Any type of data
  *
- *  only takes one iterable for input 
+ * Quicker than an array at checking if a value exists inside of
+ * it's collection
  */
 
 let mySet = new Set();
@@ -142,4 +143,9 @@ mySet.has('2'); //false
 mySet.delete(2); //true
 mySet.delete(2); //false (already deleted)
 
-console.log('mySet - ', mySet); //set(5){1, 3, "tuesday", 5} 
+console.log('mySet - ', mySet); //set(4){1, 3, "tuesday", 5} 
+
+
+mySet.clear();
+
+console.log('mySet - ', mySet); //set(0){}
