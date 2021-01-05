@@ -43,9 +43,17 @@ const hasDuplicate = arr => new Set(arr).size < arr.length;
 
 /**
  * vowelCount
-Write a function called vowelCount which accepts a string and returns a map where the keys are numbers and the values are the count of the vowels in the string.
+Write a function called vowelCount which accepts a string and
+returns a map where the keys are letters and the values are the count of the vowels in the string.
 
 vowelCount('awesome') // Map { 'a' => 1, 'e' => 2, 'o' => 1 }
 vowelCount('Colt') // Map { 'o' => 1 }
-
  */
+
+const vowelCount = str => {
+  vowels = new Set('aeiou');
+  const vowelsOnly = str.filter(l => vowels.has(l));
+
+});
+
+ };
