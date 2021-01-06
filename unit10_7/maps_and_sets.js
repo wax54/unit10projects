@@ -50,6 +50,12 @@ vowelCount('awesome') // Map { 'a' => 1, 'e' => 2, 'o' => 1 }
 vowelCount('Colt') // Map { 'o' => 1 }
  */
 
+/**
+ * accepts a string and returns a map where the keys are letters and
+ *  the values are the count of the vowels in the string.
+ *
+ * @param { string } str the string to be operated on
+ */
 const vowelCount = str => {
   str = str.toLowerCase();
   const vowels = new Set('aeiou');
