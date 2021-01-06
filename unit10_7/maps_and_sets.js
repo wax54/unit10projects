@@ -57,7 +57,7 @@ const vowelCount = str => {
     if (acc.has(vowel)) {
       acc.set(vowel, (acc.get(vowel) + 1));
     } else {
-      acc.set(vowel, 0);
+      acc.set(vowel, 1);
     }
     return acc;
   }, new Map());
