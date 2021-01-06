@@ -51,6 +51,7 @@ vowelCount('Colt') // Map { 'o' => 1 }
  */
 
 const vowelCount = str => {
+  str = str.toLowerCase();
   const vowels = new Set('aeiou');
   const vowelsOnly = Array.from(str).filter(l => vowels.has(l));
   const vowelCount = vowelsOnly.reduce((acc, vowel) => {
